@@ -1,0 +1,33 @@
+\documentclass[a4paper,11pt,twoside]{scrartcl}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{longtable}
+%\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+\title{Arduino eXtension (AX) Services}
+\author{Jim Conrad}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+The Arduino eXtension (AX) services construct a multi-tasking operating system over the core Arduino ``language'' functions.
+The target users for AX are advanced hobbyists and product developers who cannot use one of the legacy Real-Time Operating Systems for the Arduino.
+AX APIs are packaged in an Arduino library and can be used with the Arduino IDE as well as the Eclipse CDT.
+Even existing Arduino sketches can be adapted for use with AX.
+\section{Design Decisions}
+\subsection{IDE Compatibility}
+\begin{enumerate}
+\item AX is distributed as an Arduino Library, compatible with an advanced hobbyist's use of the Arduino IDE
+\item AX applications can be developed using a professional IDE (e.g. the Eclipse CDT)
+\end{enumerate}
+\subsection{Board Compatibility}
+\begin{enumerate}
+\item AX leverages Arduino.h definitions to support multiple CPU architectures (e.g. 8-bit AVR, 32-bit ARM...)
+\item Where possible, AX leverages existing Arduino software functions
+\end{enumerate}
+
+\end{document}
